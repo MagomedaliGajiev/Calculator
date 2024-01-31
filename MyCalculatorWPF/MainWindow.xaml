@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:MyCalculatorWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.46,0.485">
         <Button FontSize="25" Name="Add" Click="Button_Click" Content="Plus" HorizontalAlignment="Left" Margin="40,194,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
-        <Button FontSize="25" Name="Sub" Click="Button_Click" Content="Minus" HorizontalAlignment="Left" Margin="165,194,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
-        <Button FontSize="25" Name="Mult" Click="Button_Click" Content="Multiply" HorizontalAlignment="Left" Margin="290,194,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
-        <Button FontSize="25" Name="Div" Click="Button_Click" Content="Divide" HorizontalAlignment="Left" Margin="418,194,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
+        <Button FontSize="25" Name="Sub" Click="Button_Click" Content="Minus" HorizontalAlignment="Center" Margin="0,194,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
+        <Button FontSize="25" Name="Mult" Click="Button_Click" Content="Multiply" HorizontalAlignment="Left" Margin="40,324,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
+        <Button FontSize="25" Name="Div" Click="Button_Click" Content="Divide" HorizontalAlignment="Center" Margin="0,324,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
         <TextBox FontSize="20" Name="InputText" HorizontalAlignment="Left" Margin="40,29,0,0" TextWrapping="Wrap" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="212" Height="89"/>
         <Label FontSize="20" BorderThickness="1" BorderBrush="Black" Name="Answer" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="330,29,0,0" VerticalAlignment="Top" Width="175" Height="89"/>
+        <Button FontSize="25" x:Name="Cancel" Click="Button_Click" Content="Cancel" HorizontalAlignment="Left" Margin="650,324,0,0" VerticalAlignment="Top" Height="77" Width="120"/>
 
     </Grid>
 </Window>

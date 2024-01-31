@@ -20,6 +20,7 @@ namespace MyCalculatorWPF
             InitializeComponent();
             calculator = new Calculator();
             calculator.ResultGet += Calculator_ResultGet;
+
         }
 
         private void Calculator_ResultGet(object? sender, CalculatorArgs e)
@@ -32,10 +33,10 @@ namespace MyCalculatorWPF
             var parse = int.TryParse(InputText.Text, out int value);
             var name = (e.Source as FrameworkElement).Name;
 
-            if (!parse)
+            if (!parse && InputText.Text != string.Empty)
             {
                 MessageBox.Show("Неверно ввели данные!");
-                InputText.Text = string.Empty;
+                InputText.Text = "0";
             }
             switch (name)
             {
@@ -43,9 +44,15 @@ namespace MyCalculatorWPF
                 case "Sub": calculator.Sub(value); break;
                 case "Mult": calculator.Mult(value); break;
                 case "Div": calculator.Div(value); break;
+                case "Cancel": Close(); break;
                 default:
-                    MessageBox.Show("Ошибка нажатия кнапки");
+                    MessageBox.Show("Ошибка нажатия кнопки");
                     InputText.Text = string.Empty; break;
+            }
+            if (InputText.Text == string.Empty && name != "Cancel")
+            {
+                MessageBox.Show("Вы ввели пустую строку, поэтому программа закрывается!");
+                Close();
             }
         }
     }
