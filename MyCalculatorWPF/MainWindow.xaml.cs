@@ -14,11 +14,11 @@ namespace MyCalculatorWPF
 {
     public partial class MainWindow : Window
     {
-        CalculatorExceptions calculator;
+        Calculator calculator;
         public MainWindow()
         {
             InitializeComponent();
-            calculator = new CalculatorExceptions();
+            calculator = new Calculator();
             calculator.ResultGet += Calculator_ResultGet;
 
         }

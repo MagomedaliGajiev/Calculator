@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace ClassLibraryWpf
 {
-    public class CalculatorExceptions : Calculator
+    public class CalculatorExceptions : CalculatorArithmetic
     {
         public override void Div(int value)
         {
