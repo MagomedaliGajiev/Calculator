@@ -9,43 +9,43 @@ namespace ClassLibraryWpf
     public class CalculatorArithmetic
     {
         public event EventHandler<CalculatorArgs> ResultGet;
-        public int Result { get; private set; } = 0;
-        Stack<int> results = new Stack<int>();
+        public double Result { get; private set; } = 0;
+        Stack<double> results = new Stack<double>();
 
         protected virtual void GetCalculation()
         {
-            ResultGet.Invoke(this, new CalculatorArgs { answer = Result });
+            ResultGet?.Invoke(this, new CalculatorArgs { Answer = Result });
         }
 
-        public virtual void Add(int value)
+        public virtual void Add(double value)
         {
             results.Push(Result);
             Result += value;
             GetCalculation();
         }
 
-        public virtual void Sub(int value)
+        public virtual void Substract(double value)
         {
             results.Push(Result);
-            Result -= value; ;
+            Result -= value;
             GetCalculation();
         }
 
-        public virtual void Mult(int value)
+        public virtual void Multiply(double value)
         {
             results.Push(Result);
             Result *= value;
             GetCalculation();
         }
 
-        public virtual void Div(int value)
+        public virtual void Divide(double value)
         {
             results.Push(Result);
             Result /= value;
             GetCalculation();
         }
 
-        public virtual  void Cancel()
+        public virtual void Cancel()
         {
             if (results.Count > 0)
             {
@@ -55,3 +55,4 @@ namespace ClassLibraryWpf
         }
     }
 }
+

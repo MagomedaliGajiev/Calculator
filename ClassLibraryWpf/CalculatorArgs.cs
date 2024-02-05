@@ -8,7 +8,7 @@ namespace ClassLibraryWpf
 {
     public class CalculatorArgs
     {
-        public int answer = 0;
+        public double Answer { get; set; }
 
     }
 }

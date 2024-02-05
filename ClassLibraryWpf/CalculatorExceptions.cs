@@ -10,7 +10,7 @@ namespace ClassLibraryWpf
 {
     public class CalculatorExceptions : CalculatorArithmetic
     {
-        public override void Add(int value)
+        public override void Add(double value)
         {
             try
             {
@@ -22,11 +22,11 @@ namespace ClassLibraryWpf
             }
         }
 
-        public override void Sub(int value)
+        public override void Substract(double value)
         {
             try
             {
-                base.Sub(value);
+                base.Substract(value);
             }
             catch (Exception e)
             {
@@ -34,22 +34,22 @@ namespace ClassLibraryWpf
             }
         }
 
-        public override void Mult(int value)
+        public override void Multiply(double value)
         {
             try
             {
-                base.Mult(value);
+                base.Multiply(value);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
         }
-        public override void Div(int value)
+        public override void Divide(double value)
         {
             try
             {
-                base.Div(value);
+                base.Divide(value);
             }
             catch (Exception e)
             {

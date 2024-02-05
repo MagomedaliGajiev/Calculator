@@ -25,7 +25,7 @@ namespace MyCalculatorWPF
 
         private void Calculator_ResultGet(object? sender, CalculatorArgs e)
         {
-            Answer.Content = e.answer;
+            Answer.Content = e.Answer;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,9 +41,9 @@ namespace MyCalculatorWPF
             switch (name)
             {
                 case "Add": calculator.Add(value); break;
-                case "Sub": calculator.Sub(value); break;
-                case "Mult": calculator.Mult(value); break;
-                case "Div": calculator.Div(value); break;
+                case "Sub": calculator.Substract(value); break;
+                case "Mult": calculator.Multiply(value); break;
+                case "Div": calculator.Divide(value); break;
                 case "Cancel": calculator.Cancel(); break;
                 default:
                     MessageBox.Show("Ошибка нажатия кнопки");
