@@ -1,4 +1,5 @@
-﻿namespace ClassLibraryCalculator
+﻿
+namespace ClassLibraryWpf
 {
     public class Calculator
     {
@@ -8,7 +9,7 @@
 
         private void GetCalculation()
         {
-            ResultGet.Invoke(this, new CalculatorArgs { answer = Result});
+            ResultGet.Invoke(this, new CalculatorArgs { answer = Result });
         }
 
         public void Add(int value)
@@ -21,7 +22,7 @@
         public void Sub(int value)
         {
             results.Push(Result);
-            Result -= value;;
+            Result -= value; ;
             GetCalculation();
         }
 

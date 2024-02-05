@@ -1,4 +1,4 @@
-﻿using ClassLibraryCalculator;
+﻿using ClassLibraryWpf;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,11 +14,11 @@ namespace MyCalculatorWPF
 {
     public partial class MainWindow : Window
     {
-        Calculator calculator;
+        CalculatorExceptions calculator;
         public MainWindow()
         {
             InitializeComponent();
-            calculator = new Calculator();
+            calculator = new CalculatorExceptions();
             calculator.ResultGet += Calculator_ResultGet;
 
         }
