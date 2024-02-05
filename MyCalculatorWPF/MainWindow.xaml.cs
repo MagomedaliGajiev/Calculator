@@ -44,7 +44,7 @@ namespace MyCalculatorWPF
                 case "Sub": calculator.Sub(value); break;
                 case "Mult": calculator.Mult(value); break;
                 case "Div": calculator.Div(value); break;
-                case "Cancel": Close(); break;
+                case "Cancel": calculator.Cancel(); break;
                 default:
                     MessageBox.Show("Ошибка нажатия кнопки");
                     InputText.Text = string.Empty; break;

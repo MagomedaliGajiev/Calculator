@@ -45,7 +45,7 @@ namespace ClassLibraryWpf
             GetCalculation();
         }
 
-        public void Cancel()
+        public virtual  void Cancel()
         {
             if (results.Count > 0)
             {
